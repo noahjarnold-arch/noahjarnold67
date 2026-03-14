@@ -1,0 +1,38 @@
+<div style="text-align: center; padding: 20px;">
+  <h3 style="font-size: 1.5em; margin-bottom: 20px;">Administration</h3>
+  <input type="password" id="adminCode" placeholder="Enter Code" style="padding: 10px; font-size: 1em;"><br><br>
+  <button onclick="checkCode()" style="padding: 10px 20px; font-size: 1em; background-color: #4CAF50; color: white; border: none; cursor: pointer;">Enter</button>
+  <div id="adminPanel" style="display: none; margin-top: 20px;">   <h3 style="font-size: 1.2em; margin-bottom: 10px;">Admin Panel</h3>
+   <p>Welcome, Administrator!</p>
+   <p>User Information:</p>
+   <ul>
+    <li>IP Address: <span id="ipAddress">N/A</span></li>
+    <li>Other Info: This would be populated with server-side code.</li>
+   </ul>
+  </div>
+ </div>
+ <script>
+  function checkCode() {   const code = document.getElementById('adminCode').value;
+   if (code === '6767') {
+    document.getElementById('adminPanel').style.display = 'block';
+
+    // WARNING: Getting the user's IP address client-side is generally not possible due to privacy restrictions and the nature of web browsing.
+    // You can only reliably get the IP address on the server-side.
+
+    // For demonstration purposes, you might use a third-party service to attempt to get the IP, but this is unreliable.
+    // Example (using a third-party API - be mindful of CORS and usage limits):
+    // fetch('https://api.ipify.org?format=json')
+    //  .then(response => response.json())
+    //  .then(data => {
+    //   document.getElementById('ipAddress').textContent = data.ip;
+    //  })
+    //  .catch(error => {
+    //   console.error('Error fetching IP address:', error);
+    //   document.getElementById('ipAddress').textContent = 'Error fetching IP';
+    //  });
+   } else {
+    alert('Incorrect code!');
+   }
+  }
+ </script>
+  
