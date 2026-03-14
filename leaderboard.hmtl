@@ -1,0 +1,8 @@
+<div style="text-align: center; padding: 20px;">
+  <h3 style="font-size: 1.5em; margin-bottom: 20px;">Leaderboard</h3>
+  <ol style="display: inline-block; text-align: left;">
+   <li>Player 1: 1000 points</li>
+   <li>Player 2: 900 points</li>
+   <li>Player 3: 800 points</li>
+  </ol>
+ </div>
